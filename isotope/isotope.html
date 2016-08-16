@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isotope</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="isotope.pkgd.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+
+            var $list = $(".list").isotope({});
+
+            $(".filter-group a").click(function () {
+
+                var filter = $(this).attr("data-filter");
+
+                $(".list").isotope({
+                    filter : filter
+                })
+
+
+            })
+
+
+        })
+    </script>
+
+
+    <style>
+
+        body{
+            font-family: Arial;
+        }
+
+        .list{
+            padding: 0;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .list .list-item{
+            float: left;
+            margin-right:5px;
+            width: 130px;
+            height: 130px;
+            line-height: 130px;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .beyaz{
+            background-color: #9365ce;
+            border: 2px solid rgb(44, 31, 63) !important;
+        }
+        .elektronik{
+            background-color: #f00;
+            border: 2px solid rgb(44, 31, 63) !important;
+        }
+        .ev_elektronigi{
+            background-color: pink;
+            border: 2px solid rgb(44, 31, 63) !important;
+        }
+        .mobilya{
+            background-color: rosybrown;
+            border: 2px solid rgb(44, 31, 63) !important;
+        }
+        .mutfak{
+            background-color: #00ff0f;
+            border: 2px solid rgb(44, 31, 63) !important;
+        }
+
+
+        .filter-group{
+            margin-bottom:20px;
+        }
+
+        .filter-group a{
+            text-decoration: none;
+        }
+
+        .filter-group a:hover{
+            color :red;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div class="filter-group">
+    <a href="#" data-filter="*">Tümünü Göster</a> |
+    <a href="#" data-filter=".beyaz">Beyaz Eşyalar</a> |
+    <a href="#" data-filter=".elektronik">Elektronik Eşyalar</a> |
+    <a href="#" data-filter=".ev_elektronigi">Ev Elektronik Eşyaları</a> |
+    <a href="#" data-filter=".mutfak">Mutfak Eşyaları</a> |
+    <a href="#" data-filter=".mobilya">Mobilyalar</a>
+</div>
+
+<ul class="list">
+    <li class="list-item beyaz">Buzdolabı</li>
+    <li class="list-item elektronik">Televizyon</li>
+    <li class="list-item beyaz">Çamaşır Makinesi</li>
+    <li class="list-item ev_elektronigi">Ütü</li>
+    <li class="list-item mutfak">Yemek Takımı</li>
+    <li class="list-item elektronik">Sound Bar</li>
+    <li class="list-item beyaz">Bulaşık Makinesi</li>
+    <li class="list-item elektronik">Bilgisayar</li>
+    <li class="list-item mutfak">Bardak Takımı</li>
+    <li class="list-item mobilya">Yemek Masası</li>
+    <li class="list-item ev_elektronigi">Süpürge</li>
+    <li class="list-item mobilya">Zigon Sehpa</li>
+    <li class="list-item beyaz">Buzdolabı</li>
+    <li class="list-item elektronik">Televizyon</li>
+    <li class="list-item beyaz">Çamaşır Makinesi</li>
+    <li class="list-item ev_elektronigi">Ütü</li>
+    <li class="list-item mutfak">Yemek Takımı</li>
+    <li class="list-item elektronik">Sound Bar</li>
+    <li class="list-item beyaz">Bulaşık Makinesi</li>
+    <li class="list-item elektronik">Bilgisayar</li>
+    <li class="list-item mutfak">Bardak Takımı</li>
+    <li class="list-item mobilya">Yemek Masası</li>
+    <li class="list-item ev_elektronigi">Süpürge</li>
+    <li class="list-item mobilya">Zigon Sehpa</li>
+    <li class="list-item beyaz">Buzdolabı</li>
+    <li class="list-item elektronik">Televizyon</li>
+    <li class="list-item beyaz">Çamaşır Makinesi</li>
+    <li class="list-item ev_elektronigi">Ütü</li>
+    <li class="list-item mutfak">Yemek Takımı</li>
+    <li class="list-item elektronik">Sound Bar</li>
+    <li class="list-item beyaz">Bulaşık Makinesi</li>
+    <li class="list-item elektronik">Bilgisayar</li>
+    <li class="list-item mutfak">Bardak Takımı</li>
+    <li class="list-item mobilya">Yemek Masası</li>
+    <li class="list-item ev_elektronigi">Süpürge</li>
+    <li class="list-item mobilya">Zigon Sehpa</li>
+    <li class="list-item beyaz">Buzdolabı</li>
+    <li class="list-item elektronik">Televizyon</li>
+    <li class="list-item beyaz">Çamaşır Makinesi</li>
+    <li class="list-item ev_elektronigi">Ütü</li>
+    <li class="list-item mutfak">Yemek Takımı</li>
+    <li class="list-item elektronik">Sound Bar</li>
+    <li class="list-item beyaz">Bulaşık Makinesi</li>
+    <li class="list-item elektronik">Bilgisayar</li>
+    <li class="list-item mutfak">Bardak Takımı</li>
+    <li class="list-item mobilya">Yemek Masası</li>
+    <li class="list-item ev_elektronigi">Süpürge</li>
+    <li class="list-item mobilya">Zigon Sehpa</li>
+    <li class="list-item beyaz">Buzdolabı</li>
+    <li class="list-item elektronik">Televizyon</li>
+    <li class="list-item beyaz">Çamaşır Makinesi</li>
+    <li class="list-item ev_elektronigi">Ütü</li>
+    <li class="list-item mutfak">Yemek Takımı</li>
+    <li class="list-item elektronik">Sound Bar</li>
+    <li class="list-item beyaz">Bulaşık Makinesi</li>
+    <li class="list-item elektronik">Bilgisayar</li>
+    <li class="list-item mutfak">Bardak Takımı</li>
+    <li class="list-item mobilya">Yemek Masası</li>
+    <li class="list-item ev_elektronigi">Süpürge</li>
+    <li class="list-item mobilya">Zigon Sehpa</li>
+    <li class="list-item beyaz">Buzdolabı</li>
+    <li class="list-item elektronik">Televizyon</li>
+    <li class="list-item beyaz">Çamaşır Makinesi</li>
+    <li class="list-item ev_elektronigi">Ütü</li>
+    <li class="list-item mutfak">Yemek Takımı</li>
+    <li class="list-item elektronik">Sound Bar</li>
+    <li class="list-item beyaz">Bulaşık Makinesi</li>
+    <li class="list-item elektronik">Bilgisayar</li>
+    <li class="list-item mutfak">Bardak Takımı</li>
+    <li class="list-item mobilya">Yemek Masası</li>
+    <li class="list-item ev_elektronigi">Süpürge</li>
+    <li class="list-item mobilya">Zigon Sehpa</li>
+</ul>
+
+
+</body>
+</html>

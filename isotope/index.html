@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isotope</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="isotope.pkgd.min.js"></script>
+
+    <style>
+
+
+        .element-item{
+            width: 75px;
+            height: 75px;
+            background-color: yellow;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .list{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        .list .list-item{
+            float :left;
+            margin-right:10px;
+            width: 75px;
+            height: 75px;
+            background-color: #9365ce;
+            color :white;
+            text-align: center;
+            line-height: 75px;
+        }
+
+        .filter{
+            margin-bottom: 10px;;
+        }
+
+    </style>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var $list = $(".list").isotope();
+
+            $(".filter button").click(function(){
+
+                var filter = $(this).attr("data-filter");
+                $list.isotope({
+                    filter: filter
+                })
+
+            })
+
+
+        })
+
+    </script>
+
+</head>
+<body>
+
+
+<div class="filter">
+    <button data-filter="*">show all</button>
+    <button data-filter=".elektronik">Elektronik</button>
+    <button data-filter=".beyaz_esya">Beyaz Eşya</button>
+    <button data-filter=".mutfak">Mutfak</button>
+    <button data-filter=".mobilya">Mobilya</button>
+</div>
+
+
+<ul class="list">
+    <li class="list-item beyaz_esya">Buzdolabı</li>
+    <li class="list-item mobilya">6'lı Zigon Sehpa</li>
+    <li class="list-item elektronik">Bilgisayar</li>
+    <li class="list-item mutfak">Çay Seti</li>
+    <li class="list-item mutfak">Yemek Takımı</li>
+    <li class="list-item elektronik">Müzik Seti</li>
+    <li class="list-item beyaz_esya">Çamaşır Makinesi</li>
+    <li class="list-item elektronik">Televizyon</li>
+</ul>
+</body>
+</html>
